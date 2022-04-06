@@ -1,0 +1,566 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+    
+
+.contenedor {
+    display: grid;
+
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "seccion1 seccion2 seccion3"
+    "pie pie pie";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 10fr 1fr;
+    width: 100%;
+    height: 100vh;
+    grid-gap: 5px;
+
+
+}
+
+
+
+
+/*****************************
+
+GRILLA INICIO ^^^^^^
+
+
+
+
+
+
+
+FOOTER: 
+
+******************************/
+
+
+
+footer {
+    display: flex;
+    background-color: #181a1b;;
+    color: beige;
+    grid-area: pie;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 7.7vh;
+}
+
+
+
+/**
+
+
+FOOTER ^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+NAVBAR:
+
+
+**/
+
+header {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    grid-area: navbar;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 3px #e0e0e0;
+}
+
+.lista-header {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    width: 80vw;
+    align-items: center;
+    list-style: none;
+    color: #474747;
+    font-size: 1.9vw;
+    font-family: 'Anek Malayalam', sans-serif;
+
+}
+
+.lista-header li {
+    padding: 15px;
+}
+
+.lista-header a {
+    text-decoration: none;
+    color: #474747;
+}
+
+.lista-header li:hover {
+
+    font-weight: bolder;
+    background-color: #f0f0f0a6;
+    border-radius: 17px;
+    padding: 15px;
+}
+
+.imagen-header img{
+display: flex;
+width: 100%;
+}
+
+/**
+
+
+NAVBAR ^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+SECCIONES INCIO:
+
+**/
+
+.seccion1 {
+    display: flex;
+    background-color: #cfa67d;
+    color: white;
+    grid-area: seccion1;
+    width: 100%;
+    padding-top: 40%;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 6.5vw;
+    font-family: 'Lobster Two', cursive;
+
+}
+
+.seccion1:hover {
+
+    background-color: #997a5a;
+
+}
+
+
+.seccion2 {
+    display: flex;
+    background-color:  #ffbc9d;
+    color: white;
+    grid-area: seccion2;
+    width: 100%;
+    padding-top: 33%;
+    padding-left: 6%;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 5.5vw;
+    font-family: 'Lobster Two', cursive;
+}
+
+.seccion2:hover {
+
+    background-color: #e28d66;
+
+}
+
+.seccion3 {
+    display: flex;
+    background-color: #E5D2C4;
+    color: white;
+    grid-area: seccion3;
+    width: 100%;
+    padding-top: 43%;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 5.8vw;
+    font-family: 'Lobster Two', cursive;
+}
+
+.seccion3:hover {
+
+    background-color: #9b8b80;
+
+}
+
+
+/*******
+
+
+
+
+PRODUCTOS TIENDA:
+
+
+
+
+
+*******/
+
+.contenedor-store {
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar"
+    "filtros buscador buscador buscador publicidad"
+    "filtros productos productos productos publicidad"
+    "pie pie pie pie pie";
+
+    grid-template-columns: 0.7fr 1.2fr 1.2fr 1.2fr 0.7fr;
+    grid-template-rows: 2fr 1fr 9fr 1fr;
+    width: 100%;
+    height: 100vh;
+    grid-gap: 4px;
+}
+
+/****** 
+
+
+GRILLA DE TIENDA ^^^^^
+
+
+
+
+
+**********/
+
+.productos {
+
+    display: flex;
+    grid-area: productos;
+    background-color: #e0e0e0;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.4vw;
+
+}
+
+.productos-carta {
+
+    display: flex;
+    background-color: #ffffff;
+    color: #474747;
+    height: 55vh;
+    width: 45vh;
+    margin: 8px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Noticia Text', serif;
+    font-size: 1.5vw;
+    padding: 40px;
+    margin-top: 40px;
+
+}
+
+.productos-carta img {
+    height: 32vh;
+    border-radius: 8px;
+    border: solid 1px rgb(240, 240, 240);
+}
+
+.productos-carta label {
+    margin-top: 22px;
+}
+
+.productos-carta button {
+
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 1.2vw;
+    background-color:#ffbc9d;
+    font-family: 'Noticia Text', serif;
+
+}
+
+.productos-carta button:hover {
+    background-color: #d39c86;
+}
+
+.publicidad {
+    display: flex;
+    grid-area: publicidad;
+    width: 100%;
+    height: 100%;
+    background: rgb(75,245,255);
+    background: linear-gradient(0deg, rgba(75,245,255,1) 0%, rgba(9,17,121,1) 42%, rgba(68,6,58,1) 61%);
+}
+
+.publicidad a {
+    width: 100%;
+    height: 100%;
+}
+
+.publicidad img {
+    padding: 5px;
+    width: 100%;
+}
+
+
+.filtros {
+    display: flex;
+    grid-area: filtros;
+    background-color:#ffd3be;
+    flex-direction: column;
+    padding: 4vh;
+}
+
+.filtros p {
+    font-size: 1.8vw;
+    padding: 1vh;
+    font-family: 'Noticia Text', serif;
+    font-weight: bolder;
+}
+
+.filtros ul li {
+    padding: 3.5vh;
+    padding-bottom: 2.5vh;
+    list-style: none;
+    font-size: 1.4vw;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+.filtros a {
+    text-decoration: none;
+    color: #3a3939;
+}
+
+.filtros ul li:hover {
+
+    background-color: #d39c86;
+    border-radius: 15px;
+    font-weight: bold;
+
+}
+
+.buscador {
+    display: flex;
+    grid-area: buscador;
+    background-color: #404242;
+    padding: 1.8vh;
+}
+
+
+.label-busqueda img {
+    height: 4vh;
+    margin-right: 0.7vw;
+    padding-top: 4px;
+}
+
+.input-busqueda {
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    background-color: #ffffff;
+    color: rgb(77, 77, 77);
+    font-size: 1.2vw;
+    font-family: 'Anek Malayalam', sans-serif;
+}
+
+.pasa-pagina {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    bottom: 0;
+}
+
+
+
+
+
+/*****
+
+
+
+
+MOBILE:  
+
+
+
+
+
+
+*************/
+
+@media screen and (max-width: 768px) {
+    
+    .contenedor {
+        display: grid;
+    
+        grid-template-areas: 
+        
+        "pie"
+        "seccion1" 
+        "seccion2"
+        "seccion3"
+        "navbar";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0fr 2.8fr 3.1fr 3.1fr 2fr;
+        width: 100%;
+        height: 100vh;
+        grid-gap: 0px;
+    
+    
+    }
+
+    header {
+  
+        border-top: solid 3px #e0e0e0;
+        position: fixed;
+        bottom: 0;
+        height: 15vh;
+    }
+    
+    .lista-header {
+
+        width: 100vw;
+        font-size: 7vw;
+    
+    }
+    
+    .lista-header li {
+        padding: 0px;
+    }
+    
+    #li-nosotras {
+        display: none;
+    }
+
+    .lista-header a {
+        text-decoration: none;
+        color: #474747;
+    }
+    
+    .lista-header li:hover {
+    
+        font-weight: bolder;
+        background-color: #f0f0f0a6;
+        border-radius: 17px;
+        padding: 15px;
+    }
+    
+    .imagen-header img{
+    display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .seccion1 {
+
+
+        border: white solid 15px;
+        font-size: 20vw;
+        padding-top: 15%;
+
+
+    }
+    .seccion2 {
+
+
+        border: white solid 15px;
+        font-size: 17vw;
+        padding-top: 10%;
+
+    }
+    .seccion3 {
+
+        border: white solid 15px;
+        font-size: 17.5vw;
+        padding-top: 20%;
+
+    }
+
+    .contenedor-store {
+        display: grid;
+        grid-template-areas: 
+        "buscador"
+        "productos"
+        "navbar";
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr 2fr;
+        width: 100%;
+        height: 100vh;
+        grid-gap: 4px;
+    }
+
+    .publicidad {
+        display: none;
+    }
+
+    .filtros {
+        display: none;
+    }
+
+    
+    .productos-carta {
+    
+        height: 32vh;
+        width: 38vh;
+        margin: 0px;
+        font-size: 6vw;
+        margin-top: 15px;
+    
+    }
+    
+    .productos-carta img {
+        height: 20vh;
+    }
+    
+    .productos-carta label {
+        margin-top: 10px;
+        font-weight: bolder;
+
+    }
+    
+    .productos-carta button {
+    
+        padding: 4px;
+        font-size: 5.5vw;
+
+    
+    }
+    
+    
+    
+    .label-busqueda img {
+        margin-right: 5vw;
+    }
+    
+    .input-busqueda {
+
+        color: #817f7f;
+        font-size: 8vw;
+        font-weight: bolder;
+    }
+    
+    .pasa-pagina {
+
+        margin-bottom: 17vh;
+        font-size: 6vw;
+
+    }
+
+}

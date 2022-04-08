@@ -100,20 +100,30 @@ header {
 }
 
 .lista-header li {
-    padding: 15px;
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: #e7e7e7 1px 1px;
+    border-radius: 1px;
+    border: solid 1px white;
+    transition: all 0.3s;
 }
 
 .lista-header a {
     text-decoration: none;
     color: #474747;
+
 }
 
 .lista-header li:hover {
 
-    font-weight: bolder;
-    background-color: #f0f0f0a6;
-    border-radius: 17px;
-    padding: 15px;
+    background-color: #ffffffce;
+
+    box-shadow: 3px 3px #ffc9bc ;
+    border: 1px solid rgb(233, 228, 228);
+    padding-top: 17px;
+    padding-bottom: 17px;
+
 }
 
 .imagen-header img{
@@ -141,6 +151,17 @@ SECCIONES INCIO:
 
 **/
 
+@keyframes animacion {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
 .seccion1 {
     display: flex;
     background-color: #cfa67d;
@@ -152,6 +173,9 @@ SECCIONES INCIO:
     text-decoration: none;
     font-size: 6.5vw;
     font-family: 'Lobster Two', cursive;
+    animation-name: animacion;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
 
 }
 
@@ -175,6 +199,10 @@ SECCIONES INCIO:
     text-decoration: none;
     font-size: 5.5vw;
     font-family: 'Lobster Two', cursive;
+    animation-name: animacion;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+
 }
 
 .seccion2:hover {
@@ -194,6 +222,10 @@ SECCIONES INCIO:
     text-decoration: none;
     font-size: 5.8vw;
     font-family: 'Lobster Two', cursive;
+    animation-name: animacion;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
+
 }
 
 .seccion3:hover {
@@ -219,16 +251,18 @@ PRODUCTOS TIENDA:
 .contenedor-store {
     display: grid;
     grid-template-areas: 
-    "navbar navbar navbar navbar navbar"
-    "filtros buscador buscador buscador publicidad"
-    "filtros productos productos productos publicidad"
-    "pie pie pie pie pie";
+    "navbar navbar navbar"
+    "filtros buscador publicidad"
+    "filtros productos publicidad"
+    "pie pie pie";
 
-    grid-template-columns: 0.7fr 1.2fr 1.2fr 1.2fr 0.7fr;
-    grid-template-rows: 2fr 1fr 9fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-rows: 2fr 1fr auto 1fr;
     width: 100%;
-    height: 100vh;
-    grid-gap: 4px;
+    height: 100%;
+    grid-gap: 2px;
+
+    background-color: black;
 }
 
 /****** 
@@ -246,37 +280,41 @@ GRILLA DE TIENDA ^^^^^
 
     display: flex;
     grid-area: productos;
-    background-color: #e0e0e0;
+    background-image: linear-gradient(to right, rgb(192, 185, 185), rgb(70, 51, 41));
     height: auto;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0.4vw;
+    padding-top: 2%;
+    border-radius: 5px;
 
 }
 
 .productos-carta {
 
     display: flex;
-    background-color: #ffffff;
+    background-color: #ffffffe8;
     color: #474747;
-    height: 55vh;
-    width: 45vh;
+    height: auto;
+    width: 30%;
     margin: 8px;
-    border-radius: 10px;
+    /* border: 2px solid rgb(61, 51, 38); */
+    border-radius: 5px;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    align-content: center;
     font-family: 'Noticia Text', serif;
-    font-size: 1.5vw;
-    padding: 40px;
-    margin-top: 40px;
+    font-size: 1.3vw;
+    padding: 8px;
+    padding-top: 1%;
+    margin-bottom: 20px;
 
 }
 
 .productos-carta img {
-    height: 32vh;
+    width: 100%;
     border-radius: 8px;
     border: solid 1px rgb(240, 240, 240);
+    border-bottom: solid 2px silver;
 }
 
 .productos-carta label {
@@ -289,13 +327,20 @@ GRILLA DE TIENDA ^^^^^
     border-radius: 5px;
     padding: 8px;
     font-size: 1.2vw;
-    background-color:#ffbc9d;
+    background-color:#ffc9bc;
+    border: 2px solid #c57b69;
+    color: #853724;
     font-family: 'Noticia Text', serif;
+    font-weight: 800;
+    transition: all 0.3s;
 
 }
 
 .productos-carta button:hover {
-    background-color: #d39c86;
+    background-color: #c57b69;
+    color: white;
+    padding: 8px;
+
 }
 
 .publicidad {
@@ -305,6 +350,7 @@ GRILLA DE TIENDA ^^^^^
     height: 100%;
     background: rgb(75,245,255);
     background: linear-gradient(0deg, rgba(75,245,255,1) 0%, rgba(9,17,121,1) 42%, rgba(68,6,58,1) 61%);
+    border-radius: 5px;
 }
 
 .publicidad a {
@@ -321,9 +367,11 @@ GRILLA DE TIENDA ^^^^^
 .filtros {
     display: flex;
     grid-area: filtros;
-    background-color:#ffd3be;
+    background-color:#222222;
     flex-direction: column;
     padding: 4vh;
+    color: white;
+    border-radius: 5px;
 }
 
 .filtros p {
@@ -339,18 +387,20 @@ GRILLA DE TIENDA ^^^^^
     list-style: none;
     font-size: 1.4vw;
     font-family: 'Anek Malayalam', sans-serif;
+    transition: all 0.3s;
 }
 
 .filtros a {
     text-decoration: none;
-    color: #3a3939;
+    color: #ffffff;
 }
 
 .filtros ul li:hover {
 
-    background-color: #d39c86;
-    border-radius: 15px;
-    font-weight: bold;
+    background-color: #353232;
+    box-shadow: #ffc9bc 3px 3px;
+    border-radius: 1px;
+    padding: 4vh;
 
 }
 
@@ -359,6 +409,7 @@ GRILLA DE TIENDA ^^^^^
     grid-area: buscador;
     background-color: #404242;
     padding: 1.8vh;
+    border-radius: 5px;
 }
 
 
@@ -379,12 +430,33 @@ GRILLA DE TIENDA ^^^^^
 }
 
 .pasa-pagina {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 5%;
+
+}
+
+.pasa-pagina a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: 5px;
 }
 
 
+.bloque {
+    display: flex;
+    background-color: #181a1b;
+    width: 200px;
+    height: 200px;
+}
 
 
 
@@ -446,18 +518,7 @@ MOBILE:
         display: none;
     }
 
-    .lista-header a {
-        text-decoration: none;
-        color: #474747;
-    }
     
-    .lista-header li:hover {
-    
-        font-weight: bolder;
-        background-color: #f0f0f0a6;
-        border-radius: 17px;
-        padding: 15px;
-    }
     
     .imagen-header img{
     display: none;
@@ -517,7 +578,7 @@ MOBILE:
     
     .productos-carta {
     
-        height: 32vh;
+        height: auto;
         width: 38vh;
         margin: 0px;
         font-size: 6vw;
@@ -526,7 +587,7 @@ MOBILE:
     }
     
     .productos-carta img {
-        height: 20vh;
+        height: auto;
     }
     
     .productos-carta label {
@@ -558,8 +619,13 @@ MOBILE:
     
     .pasa-pagina {
 
-        margin-bottom: 17vh;
-        font-size: 6vw;
+        margin-bottom: 25vh;
+
+    }
+
+    .pasa-pagina a {
+
+        font-size: xx-large;
 
     }
 
